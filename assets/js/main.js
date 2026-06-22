@@ -14,8 +14,8 @@ const isMobile = () => window.innerWidth <= 900;
 function populateContent() {
   const C = MINBA_CONTENT;
 
-  // Nav
-  document.getElementById('nav-brand').textContent = C.nav[0];
+  // Nav — brand word targets the inner span (allows logo SVG to sit alongside it later)
+  document.getElementById('nav-brand-word').textContent = C.nav[0];
   document.getElementById('nav-signal').textContent = C.nav[1];
   document.getElementById('nav-method').textContent = C.nav[2];
   document.getElementById('nav-proof').textContent  = C.nav[3];
@@ -197,7 +197,8 @@ class ParticleCanvas {
       const op = p.opacity * (1 - cv * 0.2);
       this.ctx.beginPath();
       this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      this.ctx.fillStyle = `rgba(168,85,247,${op})`;
+      // Particle colour — matches --color-purple (#8b5cf6 = rgb 139,92,246)
+      this.ctx.fillStyle = `rgba(139,92,246,${op})`;
       this.ctx.fill();
     });
 
@@ -215,7 +216,7 @@ class ParticleCanvas {
             this.ctx.beginPath();
             this.ctx.moveTo(p.x, p.y);
             this.ctx.lineTo(p2.x, p2.y);
-            this.ctx.strokeStyle = `rgba(124,58,237,${(1 - d / maxDist) * lineOp * 0.18})`;
+            this.ctx.strokeStyle = `rgba(139,92,246,${(1 - d / maxDist) * lineOp * 0.16})`;
             this.ctx.lineWidth = 0.5;
             this.ctx.stroke();
           }
