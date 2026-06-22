@@ -60,12 +60,12 @@ const MINBA_CONTENT = {
           {
             title: "Nalvaaku",
             description: "Language and learning app",
-            image: "assets/img/placeholder/nalvaaku.svg"
+            image: "./assets/img/placeholder/nalvaaku.svg"
           },
           {
             title: "Pudhirpetti",
             description: "Puzzle-led mobile experience",
-            image: "assets/img/placeholder/pudhirpetti.svg"
+            image: "./assets/img/placeholder/pudhirpetti.svg"
           }
         ]
       },
@@ -75,12 +75,12 @@ const MINBA_CONTENT = {
           {
             title: "Enterprise Workflow",
             description: "Complex flows simplified into action screens",
-            image: "assets/img/placeholder/enterprise-1.svg"
+            image: "./assets/img/placeholder/enterprise-1.svg"
           },
           {
             title: "Dashboard System",
             description: "Operational data shaped into usable views",
-            image: "assets/img/placeholder/enterprise-2.svg"
+            image: "./assets/img/placeholder/enterprise-2.svg"
           }
         ]
       },
@@ -90,7 +90,7 @@ const MINBA_CONTENT = {
           {
             title: "Content System",
             description: "Visual communication shaped for clarity",
-            image: "assets/img/placeholder/content-1.svg"
+            image: "./assets/img/placeholder/content-1.svg"
           }
         ]
       },
@@ -100,7 +100,7 @@ const MINBA_CONTENT = {
           {
             title: "Process",
             description: "Ideas becoming journeys, frames, and systems",
-            image: "assets/img/placeholder/process-1.svg"
+            image: "./assets/img/placeholder/process-1.svg"
           }
         ]
       }

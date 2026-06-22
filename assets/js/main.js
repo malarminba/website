@@ -582,20 +582,21 @@ function initContact() {
     return;
   }
 
+  // Set all initial states BEFORE creating the timeline that reads them
   gsap.set(['#contact-title', '#contact-body', '#contact-cta'], { y: 24 });
+  gsap.set('.contact-star-bg', { scale: 0.9 });
+  gsap.set('.contact-inner .section-label', { opacity: 0 });
 
   const tl = gsap.timeline({
     scrollTrigger: { trigger: '#contact', start: 'top 70%', once: true }
   });
 
-  tl.to('.contact-star-bg',  { opacity: 1, scale: 1, duration: 1.4, ease: 'power2.out' }, 0)
-    .to('.contact-inner .section-label', { opacity: 1, duration: 0.5 }, 0.2)
-    .to('#contact-title',  { opacity: 1, y: 0, duration: 1,   ease: 'power3.out' }, 0.35)
-    .to('#contact-body',   { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 0.6)
-    .to('#contact-cta',    { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 0.8)
-    .to('.footer',         { opacity: 1, duration: 0.6, ease: 'power2.out' }, 1.0);
-
-  gsap.set('.contact-star-bg', { scale: 0.9 });
+  tl.to('.contact-star-bg',             { opacity: 1, scale: 1, duration: 1.4, ease: 'power2.out' }, 0)
+    .to('.contact-inner .section-label', { opacity: 0.65, duration: 0.6, ease: 'power2.out' }, 0.2)
+    .to('#contact-title',                { opacity: 1, y: 0, duration: 1,   ease: 'power3.out' }, 0.35)
+    .to('#contact-body',                 { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 0.60)
+    .to('#contact-cta',                  { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 0.80)
+    .to('.footer',                       { opacity: 1, duration: 0.6, ease: 'power2.out' }, 1.0);
 
   // Breathing star in contact
   ScrollTrigger.create({

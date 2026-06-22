@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
         ║  1. Remove the <span class="nav-brand-word">     ║
         ║  2. Add inside .nav-brand:                       ║
         ║                                                  ║
-        ║    <img src="assets/img/logo/minba-logo.svg"     ║
+        ║    <img src="./assets/img/logo/minba-logo.svg"   ║
         ║         class="nav-brand-img"                    ║
         ║         alt="Minba"                              ║
         ║         width="88" height="22">                  ║
@@ -407,15 +407,15 @@
 
   </section>
 
-  <!-- GSAP core + plugins -->
+  <!-- GSAP core + plugins (CDN — must load before content.js and main.js) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 
-  <!-- Site content (edit here for all copy/data) -->
-  <script src="assets/js/content.js"></script>
+  <!-- Site content (edit here for all copy/data) — must load before main.js -->
+  <script src="./assets/js/content.js"></script>
 
   <!-- Animation + interaction logic -->
-  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
