@@ -1,0 +1,49 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080810"/>
+      <stop offset="100%" stop-color="#0d0d1a"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <!-- grid -->
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#1a1a2e" stroke-width="1"/>
+  <line x1="0" y1="440" x2="800" y2="440" stroke="#1a1a2e" stroke-width="1"/>
+  <line x1="60" y1="0" x2="60" y2="500" stroke="#1a1a2e" stroke-width="1"/>
+  <line x1="740" y1="0" x2="740" y2="500" stroke="#1a1a2e" stroke-width="1"/>
+  <!-- status bar -->
+  <rect x="0" y="0" width="800" height="28" fill="#0a0a14"/>
+  <rect x="60" y="8" width="60" height="12" rx="2" fill="#1c1c2e"/>
+  <rect x="680" y="8" width="60" height="12" rx="2" fill="#1c1c2e"/>
+  <!-- phone chrome -->
+  <rect x="290" y="40" width="220" height="420" rx="24" fill="#0d0d18" stroke="#1e1e30" stroke-width="1"/>
+  <rect x="302" y="52" width="196" height="396" rx="16" fill="#080810"/>
+  <!-- notch -->
+  <rect x="355" y="56" width="90" height="14" rx="7" fill="#0d0d18"/>
+  <!-- screen content - nav bar -->
+  <rect x="310" y="76" width="180" height="28" fill="#0c0c16"/>
+  <text x="400" y="95" font-family="Inter,sans-serif" font-size="9" fill="#a855f7" text-anchor="middle" letter-spacing="2">NALVAAKU</text>
+  <!-- card items -->
+  <rect x="318" y="116" width="164" height="52" rx="6" fill="#111120" stroke="#1e1e2e" stroke-width="0.5"/>
+  <rect x="326" y="124" width="32" height="32" rx="4" fill="#1a1030"/>
+  <text x="366" y="135" font-family="Inter,sans-serif" font-size="7" fill="#7070a0">Today's word</text>
+  <text x="366" y="148" font-family="Inter,sans-serif" font-size="10" fill="#eeeaf8" font-weight="600">வணக்கம்</text>
+  <rect x="318" y="176" width="76" height="76" rx="8" fill="#0e0e1c" stroke="#1e1e2e" stroke-width="0.5"/>
+  <rect x="406" y="176" width="76" height="36" rx="8" fill="#0e0e1c" stroke="#1e1e2e" stroke-width="0.5"/>
+  <rect x="406" y="218" width="76" height="34" rx="8" fill="#100e1c" stroke="#1a1030" stroke-width="0.5"/>
+  <text x="356" y="218" font-family="Inter,sans-serif" font-size="6" fill="#6d28d9" text-anchor="middle">LESSON</text>
+  <!-- progress arc hint -->
+  <circle cx="356" cy="310" r="40" fill="none" stroke="#1a1a2e" stroke-width="6"/>
+  <circle cx="356" cy="310" r="40" fill="none" stroke="#7c3aed" stroke-width="6" stroke-dasharray="167" stroke-dashoffset="50" stroke-linecap="round" filter="url(#glow)"/>
+  <text x="356" y="314" font-family="Inter,sans-serif" font-size="10" fill="#eeeaf8" text-anchor="middle" font-weight="600">68%</text>
+  <!-- bottom nav -->
+  <rect x="310" y="400" width="180" height="40" fill="#0c0c16"/>
+  <circle cx="345" cy="420" r="3" fill="#7c3aed" filter="url(#glow)"/>
+  <circle cx="400" cy="420" r="3" fill="#2a2a3e"/>
+  <circle cx="455" cy="420" r="3" fill="#2a2a3e"/>
+  <!-- label -->
+  <text x="590" y="280" font-family="Inter,sans-serif" font-size="11" fill="#38384f" text-anchor="middle">Language</text>
+  <text x="590" y="296" font-family="Inter,sans-serif" font-size="11" fill="#38384f" text-anchor="middle">Learning App</text>
+  <text x="590" y="320" font-family="Inter,sans-serif" font-size="8" fill="#28283e" text-anchor="middle" letter-spacing="2">NALVAAKU</text>
+</svg>

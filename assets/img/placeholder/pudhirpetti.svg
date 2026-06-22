@@ -1,0 +1,58 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060610"/>
+      <stop offset="100%" stop-color="#0e0c18"/>
+    </linearGradient>
+    <filter id="g2"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)"/>
+  <rect x="0" y="0" width="800" height="28" fill="#08080e"/>
+  <!-- grid subtle -->
+  <line x1="0" y1="60" x2="800" y2="60" stroke="#141420" stroke-width="1"/>
+  <line x1="0" y1="440" x2="800" y2="440" stroke="#141420" stroke-width="1"/>
+  <!-- phone -->
+  <rect x="288" y="36" width="224" height="428" rx="26" fill="#0c0c16" stroke="#1c1c2c" stroke-width="1"/>
+  <rect x="300" y="48" width="200" height="404" rx="18" fill="#07070f"/>
+  <!-- notch -->
+  <rect x="358" y="52" width="84" height="13" rx="6.5" fill="#0c0c16"/>
+  <!-- puzzle grid -->
+  <text x="400" y="88" font-family="Inter,sans-serif" font-size="9" fill="#7c3aed" text-anchor="middle" letter-spacing="3" filter="url(#g2)">PUDHIRPETTI</text>
+  <!-- 4x4 puzzle board -->
+  <rect x="316" y="100" width="168" height="168" rx="4" fill="#0f0f1c" stroke="#1a1a2c" stroke-width="1"/>
+  <!-- grid lines -->
+  <line x1="358" y1="100" x2="358" y2="268" stroke="#1e1e30" stroke-width="0.5"/>
+  <line x1="400" y1="100" x2="400" y2="268" stroke="#1e1e30" stroke-width="0.5"/>
+  <line x1="442" y1="100" x2="442" y2="268" stroke="#1e1e30" stroke-width="0.5"/>
+  <line x1="316" y1="142" x2="484" y2="142" stroke="#1e1e30" stroke-width="0.5"/>
+  <line x1="316" y1="184" x2="484" y2="184" stroke="#1e1e30" stroke-width="0.5"/>
+  <line x1="316" y1="226" x2="484" y2="226" stroke="#1e1e30" stroke-width="0.5"/>
+  <!-- filled cells -->
+  <rect x="318" y="102" width="38" height="38" rx="2" fill="#1a1030" stroke="#4c1d95" stroke-width="0.7"/>
+  <rect x="402" y="102" width="38" height="38" rx="2" fill="#1a1030" stroke="#4c1d95" stroke-width="0.7"/>
+  <rect x="360" y="144" width="38" height="38" rx="2" fill="#1a1030" stroke="#6d28d9" stroke-width="0.7" filter="url(#g2)"/>
+  <rect x="444" y="144" width="38" height="38" rx="2" fill="#1a1030" stroke="#4c1d95" stroke-width="0.7"/>
+  <rect x="318" y="186" width="38" height="38" rx="2" fill="#1a1030" stroke="#4c1d95" stroke-width="0.7"/>
+  <rect x="444" y="186" width="38" height="38" rx="2" fill="#120e20" stroke="#7c3aed" stroke-width="1" filter="url(#g2)"/>
+  <rect x="360" y="228" width="38" height="38" rx="2" fill="#1a1030" stroke="#4c1d95" stroke-width="0.7"/>
+  <!-- text labels in cells -->
+  <text x="337" y="125" font-family="Inter,sans-serif" font-size="11" fill="#a855f7" text-anchor="middle" font-weight="600" filter="url(#g2)">அ</text>
+  <text x="421" y="125" font-family="Inter,sans-serif" font-size="11" fill="#7c3aed" text-anchor="middle" font-weight="600">ஆ</text>
+  <text x="379" y="167" font-family="Inter,sans-serif" font-size="11" fill="#c084fc" text-anchor="middle" font-weight="600" filter="url(#g2)">இ</text>
+  <text x="463" y="167" font-family="Inter,sans-serif" font-size="11" fill="#7c3aed" text-anchor="middle" font-weight="600">ஈ</text>
+  <!-- score bar -->
+  <rect x="316" y="282" width="168" height="6" rx="3" fill="#1a1a2e"/>
+  <rect x="316" y="282" width="110" height="6" rx="3" fill="#7c3aed" filter="url(#g2)"/>
+  <text x="400" y="306" font-family="Inter,sans-serif" font-size="7" fill="#5050a0" text-anchor="middle">LEVEL 4 · 1240 pts</text>
+  <!-- bottom cta -->
+  <rect x="336" y="316" width="128" height="28" rx="14" fill="#1a0f2e" stroke="#7c3aed" stroke-width="0.7"/>
+  <text x="400" y="334" font-family="Inter,sans-serif" font-size="7" fill="#a855f7" text-anchor="middle" letter-spacing="1">NEXT PUZZLE</text>
+  <!-- hints -->
+  <circle cx="340" cy="364" r="6" fill="#0e0e1a" stroke="#1c1c2c" stroke-width="1"/>
+  <circle cx="360" cy="364" r="6" fill="#0e0e1a" stroke="#1c1c2c" stroke-width="1"/>
+  <circle cx="380" cy="364" r="6" fill="#120e20" stroke="#4c1d95" stroke-width="1" filter="url(#g2)"/>
+  <!-- label -->
+  <text x="610" y="270" font-family="Inter,sans-serif" font-size="11" fill="#2a2a3e" text-anchor="middle">Puzzle-led</text>
+  <text x="610" y="286" font-family="Inter,sans-serif" font-size="11" fill="#2a2a3e" text-anchor="middle">Mobile Experience</text>
+  <text x="610" y="308" font-family="Inter,sans-serif" font-size="8" fill="#1e1e30" text-anchor="middle" letter-spacing="2">PUDHIRPETTI</text>
+</svg>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minba — Voice out of Noise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav-inner">
+      <a href="#noise" class="nav-brand" id="nav-brand"></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link" id="nav-signal" href="#signal"></a></li>
+        <li><a class="nav-link" id="nav-method" href="#method"></a></li>
+        <li><a class="nav-link" id="nav-proof" href="#proof"></a></li>
+        <li><a class="nav-link nav-email" id="nav-email"></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section 1: Noise -->
+  <section id="noise" class="section section--noise">
+    <canvas id="hero-canvas"></canvas>
+    <div class="noise-content">
+      <p class="noise-eyebrow">—</p>
+      <h1 class="noise-title" id="noise-title"></h1>
+      <p class="noise-micro" id="noise-micro"></p>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line-wrap"><div class="scroll-line"></div></div>
+      <span class="scroll-label">scroll</span>
+    </div>
+  </section>
+
+  <!-- Section 2: Signal -->
+  <section id="signal" class="section section--signal">
+    <div class="signal-inner">
+      <div class="signal-left">
+        <div class="signal-text-block">
+          <span class="section-label">Signal</span>
+          <h2 class="signal-title" id="signal-title"></h2>
+          <p class="signal-body" id="signal-body"></p>
+          <p class="signal-secondary" id="signal-secondary"></p>
+        </div>
+        <div class="signal-areas" id="signal-areas"></div>
+      </div>
+      <div class="signal-right">
+        <div class="star-container" id="star-container">
+          <svg class="star-crystal" id="main-star" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <filter id="glow-soft" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="5" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="glow-strong" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="14" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#a855f7" stop-opacity="0.18"/>
+                <stop offset="60%" stop-color="#6d28d9" stop-opacity="0.07"/>
+                <stop offset="100%" stop-color="#4c1d95" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#c084fc" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.5"/>
+              </linearGradient>
+            </defs>
+            <!-- Aura -->
+            <circle cx="100" cy="100" r="94" fill="url(#aura)" filter="url(#glow-strong)"/>
+            <!-- Outer 6-pointed star -->
+            <polygon class="star-outer"
+              points="100,18 121,64 171,59 142,100 171,141 121,136 100,182 79,136 29,141 58,100 29,59 79,64"
+              fill="none"
+              stroke="url(#lineGrad)"
+              stroke-width="0.9"
+              filter="url(#glow-soft)"
+              opacity="0.85"/>
+            <!-- Inner diamond -->
+            <polygon class="star-inner"
+              points="100,50 150,100 100,150 50,100"
+              fill="rgba(139,92,246,0.04)"
+              stroke="#a855f7"
+              stroke-width="0.6"
+              opacity="0.65"/>
+            <!-- Radial cross lines -->
+            <line x1="100" y1="18" x2="100" y2="182" stroke="#7c3aed" stroke-width="0.35" opacity="0.28"/>
+            <line x1="29" y1="59" x2="171" y2="141" stroke="#7c3aed" stroke-width="0.35" opacity="0.28"/>
+            <line x1="171" y1="59" x2="29" y2="141" stroke="#7c3aed" stroke-width="0.35" opacity="0.28"/>
+            <line x1="29" y1="100" x2="171" y2="100" stroke="#7c3aed" stroke-width="0.35" opacity="0.28"/>
+            <!-- Facet highlights -->
+            <line x1="100" y1="50" x2="150" y2="100" stroke="#c084fc" stroke-width="0.5" opacity="0.45"/>
+            <line x1="100" y1="50" x2="50" y2="100" stroke="#c084fc" stroke-width="0.5" opacity="0.45"/>
+            <line x1="100" y1="150" x2="150" y2="100" stroke="#7c3aed" stroke-width="0.5" opacity="0.3"/>
+            <line x1="100" y1="150" x2="50" y2="100" stroke="#7c3aed" stroke-width="0.5" opacity="0.3"/>
+            <!-- Outer point dots -->
+            <circle cx="100" cy="18" r="1.5" fill="#c084fc" opacity="0.75" filter="url(#glow-soft)"/>
+            <circle cx="171" cy="59" r="1.2" fill="#a855f7" opacity="0.55"/>
+            <circle cx="171" cy="141" r="1.2" fill="#a855f7" opacity="0.55"/>
+            <circle cx="100" cy="182" r="1.5" fill="#c084fc" opacity="0.75" filter="url(#glow-soft)"/>
+            <circle cx="29" cy="141" r="1.2" fill="#a855f7" opacity="0.55"/>
+            <circle cx="29" cy="59" r="1.2" fill="#a855f7" opacity="0.55"/>
+            <!-- Center -->
+            <circle cx="100" cy="100" r="2.8" fill="#e9d5ff" filter="url(#glow-soft)" opacity="0.9"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Method -->
+  <section id="method" class="section section--method">
+    <div class="method-inner">
+      <div class="method-header">
+        <span class="section-label">Method</span>
+        <h2 class="method-title" id="method-title"></h2>
+        <p class="method-body" id="method-body"></p>
+      </div>
+      <div class="method-layout">
+        <div class="method-star-col">
+          <div class="method-star-wrap">
+            <svg class="star-crystal star-crystal--sm" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <filter id="glow-m" x="-60%" y="-60%" width="220%" height="220%">
+                  <feGaussianBlur stdDeviation="6" result="blur"/>
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+                <radialGradient id="auraM" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.15"/>
+                  <stop offset="100%" stop-color="#4c1d95" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <circle cx="100" cy="100" r="90" fill="url(#auraM)" filter="url(#glow-m)"/>
+              <polygon points="100,18 121,64 171,59 142,100 171,141 121,136 100,182 79,136 29,141 58,100 29,59 79,64"
+                fill="none" stroke="#6d28d9" stroke-width="0.8" opacity="0.55"/>
+              <polygon points="100,50 150,100 100,150 50,100"
+                fill="none" stroke="#7c3aed" stroke-width="0.6" opacity="0.4"/>
+              <line x1="100" y1="18" x2="100" y2="182" stroke="#6d28d9" stroke-width="0.35" opacity="0.25"/>
+              <line x1="29" y1="59" x2="171" y2="141" stroke="#6d28d9" stroke-width="0.35" opacity="0.25"/>
+              <line x1="171" y1="59" x2="29" y2="141" stroke="#6d28d9" stroke-width="0.35" opacity="0.25"/>
+              <circle cx="100" cy="100" r="2.5" fill="#a855f7" filter="url(#glow-m)" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="method-center-line">
+            <div class="method-line-fill" id="method-line-fill"></div>
+          </div>
+        </div>
+        <div class="method-steps" id="method-steps"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Proof -->
+  <section id="proof" class="section section--proof">
+    <div class="proof-inner">
+      <div class="proof-header">
+        <span class="section-label">Proof</span>
+        <h2 class="proof-title" id="proof-title"></h2>
+        <p class="proof-subtitle" id="proof-subtitle"></p>
+      </div>
+      <div class="proof-layout">
+        <aside class="proof-sidebar">
+          <ul class="proof-cats" id="proof-cats"></ul>
+        </aside>
+        <div class="proof-stage" id="proof-stage"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Contact -->
+  <section id="contact" class="section section--contact">
+    <div class="contact-star-bg" aria-hidden="true">
+      <svg class="star-crystal star-crystal--contact" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="glow-c" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="18" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <radialGradient id="auraC" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#a855f7" stop-opacity="0.14"/>
+            <stop offset="70%" stop-color="#6d28d9" stop-opacity="0.05"/>
+            <stop offset="100%" stop-color="#4c1d95" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="95" fill="url(#auraC)" filter="url(#glow-c)"/>
+        <polygon points="100,18 121,64 171,59 142,100 171,141 121,136 100,182 79,136 29,141 58,100 29,59 79,64"
+          fill="none" stroke="#6d28d9" stroke-width="0.7" opacity="0.45"/>
+        <polygon points="100,50 150,100 100,150 50,100"
+          fill="none" stroke="#7c3aed" stroke-width="0.5" opacity="0.32"/>
+        <line x1="100" y1="18" x2="100" y2="182" stroke="#6d28d9" stroke-width="0.3" opacity="0.22"/>
+        <line x1="29" y1="59" x2="171" y2="141" stroke="#6d28d9" stroke-width="0.3" opacity="0.22"/>
+        <line x1="171" y1="59" x2="29" y2="141" stroke="#6d28d9" stroke-width="0.3" opacity="0.22"/>
+        <circle cx="100" cy="100" r="3" fill="#c084fc" filter="url(#glow-c)" opacity="0.85"/>
+      </svg>
+    </div>
+    <div class="contact-inner">
+      <span class="section-label">Contact</span>
+      <h2 class="contact-title" id="contact-title"></h2>
+      <p class="contact-body" id="contact-body"></p>
+      <a class="contact-cta" id="contact-cta"></a>
+    </div>
+    <footer class="footer">
+      <span class="footer-brand" id="footer-brand"></span>
+      <span class="footer-sep">·</span>
+      <span class="footer-line" id="footer-line"></span>
+    </footer>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

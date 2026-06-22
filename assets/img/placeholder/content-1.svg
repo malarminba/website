@@ -1,0 +1,80 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070710"/>
+      <stop offset="100%" stop-color="#0d0d1c"/>
+    </linearGradient>
+    <filter id="cg"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="100%" stop-color="#1a0f30"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#cbg)"/>
+  <!-- header bar -->
+  <rect x="0" y="0" width="800" height="40" fill="#06060e"/>
+  <rect x="0" y="40" width="800" height="1" fill="#141420"/>
+  <text x="28" y="25" font-family="Inter,sans-serif" font-size="9" fill="#38384f" letter-spacing="2">CONTENT SYSTEM</text>
+  <!-- grid layout -->
+  <!-- large feature card -->
+  <rect x="24" y="60" width="360" height="200" rx="4" fill="url(#pg)" stroke="#2a1050" stroke-width="1"/>
+  <rect x="24" y="60" width="360" height="200" rx="4" fill="url(#cbg)" opacity="0.4"/>
+  <!-- geometric overlay -->
+  <line x1="24" y1="180" x2="384" y2="180" stroke="#2a1050" stroke-width="0.5"/>
+  <line x1="204" y1="60" x2="204" y2="260" stroke="#2a1050" stroke-width="0.5"/>
+  <polygon points="24,180 204,60 384,180" fill="none" stroke="#4c1d95" stroke-width="0.4" opacity="0.5"/>
+  <circle cx="204" cy="160" r="40" fill="none" stroke="#6d28d9" stroke-width="0.5" opacity="0.4" filter="url(#cg)"/>
+  <circle cx="204" cy="160" r="8" fill="#7c3aed" opacity="0.5" filter="url(#cg)"/>
+  <text x="40" y="238" font-family="Syne,Inter,sans-serif" font-size="13" fill="#eeeaf8" font-weight="700">Campaign Visual</text>
+  <text x="40" y="254" font-family="Inter,sans-serif" font-size="8" fill="#7c3aed">Identity · Q2 2024</text>
+  <!-- 3 smaller cards -->
+  <rect x="24" y="274" width="112" height="100" rx="4" fill="#0c0c1a" stroke="#1a1a2c" stroke-width="1"/>
+  <rect x="146" y="274" width="112" height="100" rx="4" fill="#0c0c1a" stroke="#1a1a2c" stroke-width="1"/>
+  <rect x="268" y="274" width="116" height="100" rx="4" fill="#0c0c1a" stroke="#1c1c2c" stroke-width="1"/>
+  <!-- small card content -->
+  <rect x="32" y="284" width="96" height="52" rx="2" fill="#111120"/>
+  <line x1="32" y1="306" x2="128" y2="306" stroke="#1e1e30" stroke-width="0.5"/>
+  <circle cx="80" cy="320" r="8" fill="none" stroke="#7c3aed" stroke-width="0.7" filter="url(#cg)"/>
+  <text x="80" y="356" font-family="Inter,sans-serif" font-size="7" fill="#5050a0" text-anchor="middle">Social</text>
+  <rect x="154" y="284" width="96" height="52" rx="2" fill="#111120"/>
+  <rect x="160" y="296" width="60" height="6" rx="1" fill="#1e1e30"/>
+  <rect x="160" y="308" width="40" height="6" rx="1" fill="#2a1050"/>
+  <text x="198" y="356" font-family="Inter,sans-serif" font-size="7" fill="#5050a0" text-anchor="middle">Ads</text>
+  <rect x="276" y="284" width="100" height="52" rx="2" fill="#0a0a18"/>
+  <rect x="282" y="290" width="30" height="30" rx="2" fill="#1a1030"/>
+  <rect x="318" y="290" width="52" height="8" rx="1" fill="#1c1c2c"/>
+  <rect x="318" y="304" width="38" height="6" rx="1" fill="#141420"/>
+  <text x="326" y="356" font-family="Inter,sans-serif" font-size="7" fill="#5050a0" text-anchor="middle">Print</text>
+  <!-- right panel -->
+  <rect x="400" y="60" width="376" height="314" rx="4" fill="#0a0a14" stroke="#141420" stroke-width="1"/>
+  <text x="420" y="90" font-family="Inter,sans-serif" font-size="8" fill="#38384f" letter-spacing="1.5">STYLE GUIDE</text>
+  <!-- color palette -->
+  <text x="420" y="116" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" letter-spacing="1">COLOURS</text>
+  <rect x="420" y="124" width="24" height="24" rx="2" fill="#7c3aed"/>
+  <rect x="452" y="124" width="24" height="24" rx="2" fill="#4c1d95"/>
+  <rect x="484" y="124" width="24" height="24" rx="2" fill="#a855f7"/>
+  <rect x="516" y="124" width="24" height="24" rx="2" fill="#c084fc"/>
+  <rect x="548" y="124" width="24" height="24" rx="2" fill="#0d0d18"/>
+  <rect x="580" y="124" width="24" height="24" rx="2" fill="#eeeaf8"/>
+  <!-- type scale -->
+  <text x="420" y="170" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" letter-spacing="1">TYPE</text>
+  <text x="420" y="188" font-family="Syne,Inter,sans-serif" font-size="16" fill="#eeeaf8" font-weight="700">Display Aa</text>
+  <text x="420" y="204" font-family="Inter,sans-serif" font-size="11" fill="#c0c0e0">Body text Aa</text>
+  <text x="420" y="218" font-family="Inter,sans-serif" font-size="8" fill="#7070a0" letter-spacing="2">CAPTION Aa</text>
+  <!-- grid rule -->
+  <line x1="420" y1="230" x2="756" y2="230" stroke="#141420" stroke-width="1"/>
+  <!-- spacing guide -->
+  <text x="420" y="252" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" letter-spacing="1">SPACING SYSTEM</text>
+  <rect x="420" y="260" width="4" height="4" rx="1" fill="#4c1d95"/>
+  <rect x="432" y="260" width="8" height="8" rx="1" fill="#4c1d95"/>
+  <rect x="448" y="260" width="16" height="16" rx="1" fill="#6d28d9"/>
+  <rect x="472" y="260" width="24" height="24" rx="1" fill="#7c3aed" opacity="0.7" filter="url(#cg)"/>
+  <rect x="504" y="260" width="32" height="32" rx="1" fill="#4c1d95" opacity="0.5"/>
+  <text x="422" y="312" font-family="Inter,sans-serif" font-size="7" fill="#28283e">4px</text>
+  <text x="432" y="312" font-family="Inter,sans-serif" font-size="7" fill="#28283e">8px</text>
+  <text x="448" y="312" font-family="Inter,sans-serif" font-size="7" fill="#28283e">16px</text>
+  <text x="474" y="312" font-family="Inter,sans-serif" font-size="7" fill="#28283e">24px</text>
+  <text x="506" y="312" font-family="Inter,sans-serif" font-size="7" fill="#28283e">32px</text>
+  <!-- bottom tag -->
+  <text x="400" y="406" font-family="Inter,sans-serif" font-size="8" fill="#28283e" letter-spacing="1">Content System · Visual Language</text>
+</svg>

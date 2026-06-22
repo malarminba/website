@@ -1,0 +1,73 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06060e"/>
+      <stop offset="100%" stop-color="#0b0b18"/>
+    </linearGradient>
+    <filter id="dg"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="bar1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#3d1078"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#dbg)"/>
+  <!-- header -->
+  <rect x="0" y="0" width="800" height="44" fill="#080810"/>
+  <rect x="0" y="44" width="800" height="1" fill="#141420"/>
+  <text x="28" y="27" font-family="Inter,sans-serif" font-size="9" fill="#38384f" letter-spacing="2">DASHBOARD SYSTEM</text>
+  <!-- KPI row -->
+  <rect x="24" y="62" width="168" height="76" rx="4" fill="#0d0d1a" stroke="#1c1c2c" stroke-width="1"/>
+  <text x="40" y="84" font-family="Inter,sans-serif" font-size="7" fill="#5050a0" letter-spacing="1.5">TOTAL REQUESTS</text>
+  <text x="40" y="112" font-family="Inter,sans-serif" font-size="22" fill="#eeeaf8" font-weight="700" font-family="Syne,sans-serif">2,841</text>
+  <text x="40" y="126" font-family="Inter,sans-serif" font-size="7" fill="#4ade80">↑ 12.4%</text>
+
+  <rect x="204" y="62" width="168" height="76" rx="4" fill="#0d0d1a" stroke="#1c1c2c" stroke-width="1"/>
+  <text x="220" y="84" font-family="Inter,sans-serif" font-size="7" fill="#5050a0" letter-spacing="1.5">APPROVED</text>
+  <text x="220" y="112" font-family="Inter,sans-serif" font-size="22" fill="#eeeaf8" font-weight="700">1,970</text>
+  <text x="220" y="126" font-family="Inter,sans-serif" font-size="7" fill="#4ade80">↑ 8.1%</text>
+
+  <rect x="384" y="62" width="168" height="76" rx="4" fill="#0d0d1a" stroke="#4c1d95" stroke-width="0.8" filter="url(#dg)"/>
+  <text x="400" y="84" font-family="Inter,sans-serif" font-size="7" fill="#7c3aed" letter-spacing="1.5">IN REVIEW</text>
+  <text x="400" y="112" font-family="Inter,sans-serif" font-size="22" fill="#c084fc" font-weight="700" filter="url(#dg)">342</text>
+  <text x="400" y="126" font-family="Inter,sans-serif" font-size="7" fill="#f59e0b">→ 0.0%</text>
+
+  <rect x="564" y="62" width="168" height="76" rx="4" fill="#0d0d1a" stroke="#1c1c2c" stroke-width="1"/>
+  <text x="580" y="84" font-family="Inter,sans-serif" font-size="7" fill="#5050a0" letter-spacing="1.5">AVG. CYCLE TIME</text>
+  <text x="580" y="112" font-family="Inter,sans-serif" font-size="22" fill="#eeeaf8" font-weight="700">2.3d</text>
+  <text x="580" y="126" font-family="Inter,sans-serif" font-size="7" fill="#4ade80">↓ 0.4d</text>
+
+  <!-- bar chart -->
+  <rect x="24" y="158" width="460" height="240" rx="4" fill="#0d0d1a" stroke="#1c1c2c" stroke-width="1"/>
+  <text x="40" y="180" font-family="Inter,sans-serif" font-size="8" fill="#38384f" letter-spacing="1.5">MONTHLY VOLUME</text>
+  <!-- bars -->
+  <rect x="55"  y="260" width="28" height="80" rx="2" fill="url(#bar2)" opacity="0.6"/>
+  <rect x="103" y="240" width="28" height="100" rx="2" fill="url(#bar2)" opacity="0.7"/>
+  <rect x="151" y="270" width="28" height="70" rx="2" fill="url(#bar2)" opacity="0.6"/>
+  <rect x="199" y="230" width="28" height="110" rx="2" fill="url(#bar1)" opacity="0.8"/>
+  <rect x="247" y="250" width="28" height="90" rx="2" fill="url(#bar2)" opacity="0.6"/>
+  <rect x="295" y="220" width="28" height="120" rx="2" fill="url(#bar1)" opacity="0.9" filter="url(#dg)"/>
+  <rect x="343" y="245" width="28" height="95" rx="2" fill="url(#bar2)" opacity="0.6"/>
+  <rect x="391" y="235" width="28" height="105" rx="2" fill="url(#bar1)" opacity="0.85"/>
+  <!-- month labels -->
+  <text x="69"  y="360" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" text-anchor="middle">Jan</text>
+  <text x="117" y="360" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" text-anchor="middle">Feb</text>
+  <text x="165" y="360" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" text-anchor="middle">Mar</text>
+  <text x="213" y="360" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" text-anchor="middle">Apr</text>
+  <text x="261" y="360" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" text-anchor="middle">May</text>
+  <text x="309" y="360" font-family="Inter,sans-serif" font-size="7" fill="#5050a0" text-anchor="middle">Jun</text>
+  <text x="357" y="360" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" text-anchor="middle">Jul</text>
+  <text x="405" y="360" font-family="Inter,sans-serif" font-size="7" fill="#2a2a3e" text-anchor="middle">Aug</text>
+  <!-- donut -->
+  <rect x="500" y="158" width="256" height="240" rx="4" fill="#0d0d1a" stroke="#1c1c2c" stroke-width="1"/>
+  <text x="516" y="180" font-family="Inter,sans-serif" font-size="8" fill="#38384f" letter-spacing="1.5">BY DEPARTMENT</text>
+  <circle cx="628" cy="290" r="60" fill="none" stroke="#141428" stroke-width="20"/>
+  <circle cx="628" cy="290" r="60" fill="none" stroke="#7c3aed" stroke-width="20" stroke-dasharray="150" stroke-dashoffset="0" stroke-linecap="butt" filter="url(#dg)"/>
+  <circle cx="628" cy="290" r="60" fill="none" stroke="#4c1d95" stroke-width="20" stroke-dasharray="96" stroke-dashoffset="-150" stroke-linecap="butt"/>
+  <circle cx="628" cy="290" r="60" fill="none" stroke="#1a1030" stroke-width="20" stroke-dasharray="130" stroke-dashoffset="-246" stroke-linecap="butt"/>
+  <text x="628" y="286" font-family="Inter,sans-serif" font-size="8" fill="#7070a0" text-anchor="middle">Total</text>
+  <text x="628" y="300" font-family="Inter,sans-serif" font-size="14" fill="#eeeaf8" text-anchor="middle" font-weight="700">2,841</text>
+</svg>
